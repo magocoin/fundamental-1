@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=FDM
+Comment=FDM P2P Cryptocurrency
+Comment[fr]=FDM, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=FDM, eşten eşe kriptografik sanal para birimi
+Exec=FDM-qt %u
+Terminal=false
+Type=Application
+Icon=FDM128
+MimeType=x-scheme-handler/FDM;
+Categories=Office;Finance;

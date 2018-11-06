@@ -1,0 +1,26 @@
+[Unit]
+Description=FDM's distributed currency daemon
+After=network.target
+
+[Service]
+User=FDM
+Group=FDM
+
+Type=forking
+PIDFile=/var/lib/FDMd/FDMd.pid
+
+ExecStart=/usr/bin/FDMd -daemon -pid=/var/lib/FDMd/FDMd.pid \
+          -conf=/etc/FDM/FDM.conf -datadir=/var/lib/FDMd
+
+ExecStop=-/usr/bin/FDM-cli -conf=/etc/FDM/FDM.conf \
+         -datadir=/var/lib/FDMd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

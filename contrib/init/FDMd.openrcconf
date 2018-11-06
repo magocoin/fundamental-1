@@ -1,0 +1,26 @@
+# /etc/conf.d/FDMd: config file for /etc/init.d/FDMd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/FDM/FDM.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/FDMd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/FDMd.pid"
+
+# Where to write FDMd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/FDMd"
+
+# User and group to own FDMd process
+#BITCOIND_USER="FDM"
+#BITCOIND_GROUP="FDM"
+
+# Path to FDMd executable
+#BITCOIND_BIN="/usr/bin/FDMd"
+
+# Nice value to run FDMd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
